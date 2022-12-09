@@ -2,7 +2,10 @@
 in vue js we archive using v-for directive, (array of string, array of object, array of aaray)-->
 <template>
   <div>
-    <h2 v-for="(name,index) in names" :key="name">{{index}} {{name}}</h2>
+    <ul>
+      <li v-for="(name,index) in names" :key="name">{{index}} {{name}}</li>
+    </ul>
+    
     <h2 v-for="name in fullNames" :key="name.first">{{name.first}} {{name.last}}</h2>
     
     <!-- <h2 v-for="actor in actors" :key="actor.name"></h2>
@@ -24,6 +27,7 @@ export default {
         {first:'harry',last:'kent'},
         {first:'peter',last:'parker'},
     ],
+    
     // actors: [
     //   {
     //     name:'Christian Bale',
